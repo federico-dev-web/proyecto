@@ -1,0 +1,29 @@
+[
+    {"id": 1, 
+    "timestamp": 1670096837624, 
+    "nombre": "Raqueta", 
+    "descripcion": "Raqueta", 
+    "codigo": "Raqueta", 
+    "foto": "https://cdn1.iconfinder.com/data/icons/rcons-basic-sport/16/fitness_tennis_game_raquet_training_play_sport-512.png", 
+    "precio": 100, 
+    "stock": 25
+    },
+    {"id": 2, 
+    "timestamp": 1670096837624, 
+    "nombre": "Pelota de futbol", 
+    "descripcion": "Pelota de futbol", 
+    "codigo": "Pelota de futbol", 
+    "foto": "https://cdn2.iconfinder.com/data/icons/ios-7-icons/50/football-512.png", 
+    "precio": 35, 
+    "stock": 78
+    },
+    {"id": 3, 
+    "timestamp": 1670096837624, 
+    "nombre": "Pelota de basket", 
+    "descripcion": "Pelota de basket", 
+    "codigo": "Pelota de basket", 
+    "foto": "https://cdn4.iconfinder.com/data/icons/sports-flat-2/48/Basketball-512.png", 
+    "precio": 30, 
+    "stock": 50
+    }
+]

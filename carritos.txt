@@ -1,0 +1,16 @@
+[   
+    {
+        "id":1, 
+        "timestamp":1670096837624, 
+        "productos": [{"id": 1, 
+            "timestamp": 1670096837624, 
+            "nombre": "Raqueta", 
+            "descripcion": "Raqueta", 
+            "codigo": "Raqueta", 
+            "foto": "https://cdn1.iconfinder.com/data/icons/rcons-basic-sport/16/fitness_tennis_game_raquet_training_play_sport-512.png", 
+            "precio": 100, 
+            "stock": 25
+            }
+        ]
+    }
+]

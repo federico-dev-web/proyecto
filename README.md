@@ -29,6 +29,14 @@ Se actualizará el presente documento en las próximas entregas.
 | GET     | /api/carrito/:id/productos    		    | Permite listar todos los productos guardados en el carrito por su id  	 		|
 | POST    | /api/carrito/:id1/productos/:id2   		    | Para incorporar productos a un carrito id1 = id carrito, id2 = id producto 		|
 | DELETE  | /api/carrito/:id1/productos/:id_prod	    | Eliminar un producto del carrito por su id (id1) de carrito y de producto (id_prod) 	|
+| POST	  | /api/login					    | Para iniciar sesión con un usuario registrado					 	|
+| POST	  | /api/register				    | Para registrar un usuario nuevo							 	|
+| GET	  | /api/fail-login				    | Se obtiene al ingresar credenciales no válidas en el POST de loggin		 	|
+| GET	  | /api/fail-register				    | Se obtiene al no poder concretar el registro de un nuevo usuario			 	|
+| GET	  | /api/home					    | Se obtiene al realizar un loggin exitoso, o se puede acceder para ver el de la sesion	|
+| GET	  | /api/succesfull-register			    | Se obtiene al realizar un registro de nuevo usuario exitoso		 		|
+| GET	  | /api/logout					    | Permite cerrar una sesion activa						 		|
+| POST	  | /api/pedido					    | Continua el proceso de confirmar la compra del carrito de la sesion activa		|
 
 <br>
 

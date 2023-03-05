@@ -40,15 +40,15 @@ Se actualizará el presente documento en las próximas entregas.
 
 <br>
 
-## RESPUESTAS
+## REQUESTS/RESPONSES
 
 <details>
 <summary>GET <b>/api/productos</b></summary> 
 
 ```js
-GET https://horn-valley-caravel.glitch.me/api/productos
+GET http://localhost:8080/api/productos
 ```
-### Ejemplo
+### Ejemplo respuesta
 
 ```json
 [
@@ -69,6 +69,68 @@ GET https://horn-valley-caravel.glitch.me/api/productos
 	"precio":35,"stock":78
 	}
 ]
+```
+</details>
+<br>
+
+<details>
+<summary>GET <b>/api/productos/1</b></summary> 
+
+```js
+GET http://localhost:8080/api/productos/1
+```
+### Ejemplo respuesta
+
+```json
+{
+	"codigo": "Raqueta",
+	"foto": "https://cdn1.iconfinder.com/data/icons/rcons-basic-sport/16/fitness_tennis_game_raquet_training_play_sport-512.png",
+	"stock": 25,
+	"descripcion": "Raqueta",
+	"precio": 100,
+	"timestamp": 1670096837624,
+	"idStore": 1,
+	"nombre": "Raqueta"
+}
+```
+</details>
+<br>
+
+<details>
+<summary>POST <b>/api/productos/1</b></summary> 
+
+```js
+POST http://localhost:8080/api/productos/1
+```
+### Ejemplo solicitud
+
+```json
+{
+	"codigo": "Raqueta2",
+	"foto": "https://cdn1.iconfinder.com/data/icons/rcons-basic-sport/16/fitness_tennis_game_raquet_training_play_sport-512.png",
+	"stock": 25,
+	"descripcion": "Raqueta",
+	"precio": 500,
+	"idStore": 4,
+	"nombre": "Raqueta2"
+}
+```
+</details>
+
+### Ejemplo respuesta
+
+```json
+{
+	"codigo": "Raqueta2",
+	"foto": "https://cdn1.iconfinder.com/data/icons/rcons-basic-sport/16/fitness_tennis_game_raquet_training_play_sport-512.png",
+	"stock": 25,
+	"descripcion": "Raqueta",
+	"precio": 500,
+	"idStore": 4,
+	"nombre": "Raqueta2",
+	"timestamp": 1678033395055,
+	"id": 4
+}
 ```
 </details>
 <br>

@@ -115,7 +115,6 @@ POST http://localhost:8080/api/productos/1
 	"nombre": "Raqueta2"
 }
 ```
-</details>
 
 ### Ejemplo respuesta
 

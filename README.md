@@ -11,7 +11,7 @@ Actualmente se están documentando los métodos correspondientes a la primer ent
 Se actualizará el presente documento en las próximas entregas.
 
 
-### URL DEL PROYECTO EN GLITCH : `https://horn-valley-caravel.glitch.me/`
+### URL DEL PROYECTO EN GLITCH : `https://horn-valley-caravel.glitch.me/` (parcial, solo hasta la segunda entrega)
 
 
 ## METODOS

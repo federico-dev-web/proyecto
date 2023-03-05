@@ -74,7 +74,7 @@ GET http://localhost:8080/api/productos
 <br>
 
 <details>
-<summary>GET <b>/api/productos/1</b></summary> 
+<summary>GET <b>/api/productos/:id</b></summary> 
 
 ```js
 GET http://localhost:8080/api/productos/1
@@ -97,10 +97,10 @@ GET http://localhost:8080/api/productos/1
 <br>
 
 <details>
-<summary>POST <b>/api/productos/1</b></summary> 
+<summary>POST <b>/api/productos/</b></summary> 
 
 ```js
-POST http://localhost:8080/api/productos/1
+POST http://localhost:8080/api/productos/
 ```
 ### Ejemplo solicitud
 
@@ -133,3 +133,200 @@ POST http://localhost:8080/api/productos/1
 ```
 </details>
 <br>
+
+
+<details>
+<summary>PUT <b>/api/productos/:id</b></summary> 
+
+```js
+PUT http://localhost:8080/api/productos/4
+```
+### Ejemplo solicitud
+
+```json
+{
+	"codigo": "Raqueta2",
+	"foto": "https://cdn1.iconfinder.com/data/icons/rcons-basic-sport/16/fitness_tennis_game_raquet_training_play_sport-512.png",
+	"stock": 6,
+	"descripcion": "Raqueta2",
+	"precio": 5000000,
+	"idStore": 4,
+	"nombre": "Raqueta2"
+}
+```
+
+### Ejemplo respuesta
+
+```json
+{
+	"ok": "producto actualizado"
+}
+```
+</details>
+<br>
+
+
+<details>
+<summary>DELETE <b>/api/productos/:id</b></summary> 
+
+```js
+DELETE http://localhost:8080/api/productos/4
+```
+
+### Ejemplo respuesta
+
+```json
+{
+	"ok": "producto eliminado"
+}
+```
+</details>
+<br>
+
+<details>
+<summary>GET <b>/api/carrito/</b></summary> 
+
+```js
+GET http://localhost:8080/api/carrito/
+```
+
+### Ejemplo respuesta
+
+```json
+[
+	{
+		"_id": "63acb3f740a3d442f972f4c1",
+		"timestamp": 1672262647281,
+		"productos": [
+			{
+				"idStore": 1,
+				"timestamp": 1670096837624,
+				"nombre": "Raqueta",
+				"descripcion": "Raqueta",
+				"codigo": "Raqueta",
+				"foto": "https://cdn1.iconfinder.com/data/icons/rcons-basic-sport/16/fitness_tennis_game_raquet_training_play_sport-512.png",
+				"precio": 100,
+				"stock": 25,
+				"_id": "63acb41840a3d442f972f4c9"
+			},
+			{
+				"idStore": 2,
+				"timestamp": 1670096837624,
+				"nombre": "Pelota de futbol",
+				"descripcion": "Pelota de futbol",
+				"codigo": "Pelota de futbol",
+				"foto": "https://cdn2.iconfinder.com/data/icons/ios-7-icons/50/football-512.png",
+				"precio": 35,
+				"stock": 78,
+				"_id": "63acb41e40a3d442f972f4d3"
+			}
+		],
+		"__v": 0
+	},
+	{
+		"_id": "640241997d58d47da33ddf90",
+		"timestamp": 1677869465621,
+		"productos": [],
+		"__v": 0
+	},
+	{
+		"_id": "640241de63d5e918cbdb83bc",
+		"timestamp": 1677869534518,
+		"productos": [],
+		"__v": 0
+	}	
+]
+```
+</details>
+<br>
+
+
+<details>
+<summary>POST <b>/api/carrito/</b></summary> 
+
+```js
+POST http://localhost:8080/api/carrito/
+```
+
+### Ejemplo respuesta
+
+```json
+{
+	"id del carrito nuevo": "6404c4361a63250879cf29f9"
+}
+```
+</details>
+<br>
+
+<details>
+<summary>DELETE <b>/api/carrito/:id</b></summary> 
+
+```js
+DELETE http://localhost:8080/api/carrito/6404c4361a63250879cf29f9
+```
+
+### Ejemplo respuesta
+
+```json
+{
+	"ok": "carrito eliminado"
+}
+```
+</details>
+<br>
+
+<details>
+<summary>GET <b>/api/carrito/:id/productos</b></summary> 
+
+```js
+GET http://localhost:8080/api/carrito/63acb3f740a3d442f972f4c1/productos
+```
+
+### Ejemplo respuesta
+
+```json
+[
+	{
+		"idStore": 1,
+		"timestamp": 1670096837624,
+		"nombre": "Raqueta",
+		"descripcion": "Raqueta",
+		"codigo": "Raqueta",
+		"foto": "https://cdn1.iconfinder.com/data/icons/rcons-basic-sport/16/fitness_tennis_game_raquet_training_play_sport-512.png",
+		"precio": 100,
+		"stock": 25,
+		"_id": "63acb41840a3d442f972f4c9"
+	},
+	{
+		"idStore": 2,
+		"timestamp": 1670096837624,
+		"nombre": "Pelota de futbol",
+		"descripcion": "Pelota de futbol",
+		"codigo": "Pelota de futbol",
+		"foto": "https://cdn2.iconfinder.com/data/icons/ios-7-icons/50/football-512.png",
+		"precio": 35,
+		"stock": 78,
+		"_id": "63acb41e40a3d442f972f4d3"
+	}
+]
+```
+</details>
+<br>
+
+<details>
+<summary>POST <b>/api/carrito/:id1/productos/:id2 </b></summary> 
+
+```js
+POST http://localhost:8080/api/carrito/640241de63d5e918cbdb83bc/productos/1
+```
+
+### Ejemplo respuesta
+
+```json
+{
+	"ok": "se agrego el producto al carrito"
+}
+```
+</details>
+<br>
+

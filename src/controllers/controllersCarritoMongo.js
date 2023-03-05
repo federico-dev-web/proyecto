@@ -24,6 +24,14 @@ export const getCarritos = async (req, res) => {
     await mongoose.disconnect()
 }
 
+//Devuelve el carrito para la vista de "/Home"
+export const getCarritosSession = async (idCarrito) => {
+    await conexion()
+    let info = await models.carritos.find( {_id:  idCarrito } ) 
+    await mongoose.disconnect()
+    return info
+}
+
 
 //Crea un carrito y devuelve su id
 export const newCarrito = async (req, res) => {
@@ -33,6 +41,13 @@ export const newCarrito = async (req, res) => {
     let info = await models.carritos.insertMany( carritoAgregar )
     res.json( { "id del carrito nuevo": info[0]._id } )
     await mongoose.disconnect()
+}
+
+//Crea un carrito y devuelve su id
+export const newCarritoLogin = async (req, res) => {
+    let carritoAgregar = {}
+    carritoAgregar.timestamp = Date.now()
+    return await models.carritos.insertMany( carritoAgregar )
 }
 
 //Vacía un carrito y lo elimina

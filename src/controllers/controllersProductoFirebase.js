@@ -52,6 +52,14 @@ export const getProducts = async (req, res) => {
     res.json(productos.find( prod => prod.idStore == Number(req.params.id) ))
 }
 
+//devuelve todos los productos o un producto según su id
+export const getProductsHome = async (req, res) => {
+    //recibo listado de productos de db
+    let productos = await query.get().then(res => res.docs ).then( docs => docs.map(d => d.data()))
+    //respuesta para id valido
+    return { ...productos }
+}
+
 
 //recibe y agrega un producto, y lo devuelve con su id asignado
 export const postProduct = async (req, res) => {

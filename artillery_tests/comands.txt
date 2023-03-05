@@ -1,0 +1,10 @@
+
+Modo fork:
+pm2 start server.js --name serverModoFork --watch
+
+Modo cluster:
+pm2 start server.js --name serverModoCluster -i max --watch
+
+
+artillery quick --count 50 -n 20 "http://localhost:8080/api/productos" > result_fork_50x20.txt
+artillery quick --count 50 -n 20 "http://localhost:8080/api/productos" > result_cluster_50x20.txt

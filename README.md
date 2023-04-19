@@ -1,5 +1,5 @@
 # PROYECTO FINAL PARA EL CURSO DE PROGRAMACIÓN BACKEND
-## CODERHOUSE - COMISIÓN 32190		
+## CODERHOUSE - COMISIÓN 32190
 ### FEDERICO LA SELVA		<img align="right" alt="Coderhouse" height="75" width="150" src="https://concentrika.ucentral.edu.co/wp-content/uploads/2021/11/coderhouse-logo.png">	
 
 <br>

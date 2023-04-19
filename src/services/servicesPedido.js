@@ -1,13 +1,42 @@
+import twilio from "twilio"
 import { createTransport } from 'nodemailer';
-import dotenv from 'dotenv';
+import dotenv from 'dotenv'
 import logger from "../loggers/logger.js";
 
-dotenv.config({path: '../configs/.env.local'})
+
+
+dotenv.config({path: './src/configs/.env.local'})
+
+
+//--------------------configurando Twilio----------------------//
+
+
+const  accountSid = 'AC26acaa4053074a649d834e04cc517b49'
+const authToken = "805e01800df75d0c156b7fa7ec60f73d"
+
+const client = twilio(accountSid, authToken)
+
+export const sendWhatsapp = async (number,msj) => { 
+    client.messages.create({
+        body: `${msj}`,
+        from: 'whatsapp:+14155238886',
+        to: `whatsapp:${number}`
+    }).then().catch ( err => { logger.error( `error mensajes: ${err}` ) })
+}
+
+
 
 //--------------------configurando nodemailer----------------------//
 
+
 const EMAIL_ACCOUNT = process.env.EMAIL_ACCOUNT
 const EMAIL_PASSWORD = process.env.EMAIL_PASSWORD;
+
+
+dotenv.config({path: '../configs/.env.local'})
+
+const EMAIL_ADMIN = process.env.EMAIL_ACCOUNT
+const WHATSAPP = process.env.WHATSAPP_NUMB
 
 const transporter = createTransport({
     host: 'smtp.ethereal.email',
@@ -52,6 +81,8 @@ export const sendMailRegister = async (obj) => {
     }
 }
 
+//--------------------configurando pedido----------------------//
+
 
 
 export const sendMailPedido = async (destinatario, carrito) => { 
@@ -72,4 +103,17 @@ export const sendMailPedido = async (destinatario, carrito) => {
     } catch (error) {
         logger.error( `error mensajes: ${error}` )
     }
+}
+
+
+//--------------------enviar pedido----------------------//
+
+export const sendPedido = async ( carrito, usuario ) => { 
+    let wappMessage = await `
+        'datos comprador': ${usuario.username}, ${usuario.nombre}
+        'datos compra': ${carrito.productos}
+        `
+    await sendMailPedido(usuario, carrito)
+    await sendWhatsapp(WHATSAPP, wappMessage)
+    return carrito._id
 }

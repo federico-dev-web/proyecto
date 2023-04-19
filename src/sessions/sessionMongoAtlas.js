@@ -2,7 +2,7 @@ import mongoStore from 'connect-mongo'
 import dotenv from "dotenv"
 
 
-dotenv.config({path: '../configs/.env.local'})
+dotenv.config({path: './src/configs/.env.local'})
 
 const advancedOptions = { useNewUrlParser: true, useUnifiedTopology: true }
 

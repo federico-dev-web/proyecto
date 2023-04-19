@@ -1,17 +1,17 @@
 # PROYECTO FINAL PARA EL CURSO DE PROGRAMACIÓN BACKEND
-## CODERHOUSE - COMISIÓN 32190
-### FEDERICO LA SELVA
+## CODERHOUSE - COMISIÓN 32190		
+### FEDERICO LA SELVA		<img align="right" alt="Coderhouse" height="75" width="150" src="https://concentrika.ucentral.edu.co/wp-content/uploads/2021/11/coderhouse-logo.png">	
 
 <br>
 
-Este documento está en progreso. 
+Este repositorio corresponde al proyecto integrador del curso de Backend realizado en coderhouse dentro de la carrera de Desarrollador Full Stack, entre el 17/OCT/2022 y el 10/ABR/2023.
+Se trata de una API REST desarrollada en JS para soportar las operaciones básicas de un ecommerce.
+En la misma se utiliza la librería Express, para realizar el servidor, y los servicios cloud de Mongo y Firebase, para la persistencia de la información.
 
-Actualmente se están documentando los métodos correspondientes a la primer entrega partial de dicho proyecto integrador.
-
-Se actualizará el presente documento en las próximas entregas.
+Les agradezco al profesor de la comisión por las tremendas clases y por el apoyo durante toda la cursada!! [@marcosvillanueva9](https://github.com/marcosvillanueva9)
 
 
-### URL DEL PROYECTO EN GLITCH : `https://horn-valley-caravel.glitch.me/`
+### URL DEL PROYECTO EN GLITCH : `https://horn-valley-caravel.glitch.me/` (parcial, solo hasta la segunda entrega)
 
 
 ## METODOS

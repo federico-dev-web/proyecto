@@ -11,6 +11,9 @@ En la misma se utiliza la librería Express, para realizar el servidor, y los se
 Les agradezco al profesor de la comisión por las tremendas clases y por el apoyo durante toda la cursada!! [@marcosvillanueva9](https://github.com/marcosvillanueva9)
 
 
+### URL DEL PROYECTO: [https://proyecto-production-6b7e.up.railway.app/](https://proyecto-production-6b7e.up.railway.app/) (El proyecto estará temporalmente desplegado en el link detallado)
+
+
 ### URL DEL PROYECTO EN GLITCH : `https://horn-valley-caravel.glitch.me/` (parcial, solo hasta la segunda entrega)
 
 
